@@ -2,3 +2,4 @@
 .env
 .DS_Store/
 logs/
+extracted_csv/
