@@ -32,21 +32,25 @@ Create schema <schema-name>
 
 5. Create .env file:
 ```sh
-SNOWFLAKE_USER=\<username\>
-SNOWFLAKE_PASSWORD=\<password\> SNOWFLAKE_ACCOUNT=\<account-name\>
-SNOWFLAKE_WAREHOUSE=\<warehouse\> SNOWFLAKE_ROLE=\<role\>
+SNOWFLAKE_USER=<username>
+SNOWFLAKE_PASSWORD=<password>
+SNOWFLAKE_ACCOUNT=<account-name>
+SNOWFLAKE_WAREHOUSE=<warehouse>
+SNOWFLAKE_ROLE=<role>
 
-SNOWFLAKE_DATABASE=\<db-name-for-source-tables\>
-SNOWFLAKE_SCHEMA=\<schema-name-for-source-tables\>
 
-CSV_FILE_PATH=\<your-path\>/Export-CSV-from-Snowflake/extracted_csv
-DBT_SEEDS_FOLDER=\<your-path\>/Export-CSV-from-Snowflake/loadcsv/seeds
-CSV_FILES_DIRECTORY=\<your-path\>/Export-CSV-from-Snowflake/extracted_csv
+SNOWFLAKE_DATABASE=<db-name-for-source-tables>
+SNOWFLAKE_SCHEMA=<schema-name-for-source-tables>
 
-TARGET_SNOWFLAKE_USER=\<username\>
-TARGET_SNOWFLAKE_PASSWORD=\<password\>
-TARGET_SNOWFLAKE_ACCOUNT=\<account-name\>
-TARGET_SNOWFLAKE_WAREHOUSE=\<warehouse\> TARGET_SNOWFLAKE_ROLE=\<role\>
+CSV_FILE_PATH=<your-path>/Export-CSV-from-Snowflake/extracted_csv
+DBT_SEEDS_FOLDER=<your-path>/Export-CSV-from-Snowflake/loadcsv/seeds
+CSV_FILES_DIRECTORY=<your-path>/Export-CSV-from-Snowflake/extracted_csv
+
+TARGET_SNOWFLAKE_USER=<username>
+TARGET_SNOWFLAKE_PASSWORD=<password>
+TARGET_SNOWFLAKE_ACCOUNT=<account-name>
+TARGET_SNOWFLAKE_WAREHOUSE=<warehouse>
+TARGET_SNOWFLAKE_ROLE=<role>
 ```
 
 6. Run make command: 
