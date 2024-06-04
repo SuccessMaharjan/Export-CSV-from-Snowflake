@@ -16,7 +16,7 @@ else
     ACTIVATE_CMD := .
 endif
 
-all: venv install requirements mkdir_extract_csv extract_csv load_profiles seed_csv create_db_schema dbt_seed
+all: venv install requirements mkdir_extract_csv extract_csv load_profiles seed_csv dbt_seed
 
 venv:
 	$(PYTHON_ENV) -m venv $(VENV)
@@ -45,9 +45,6 @@ load_profiles:
 
 seed_csv:
 	python3 seed_csv.py
-
-create_db_schema:
-	cd loadcsv && dbt run -s create_sf_db_and_schema
 
 dbt_seed:
 	cd loadcsv && dbt seed

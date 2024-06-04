@@ -18,11 +18,7 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
-vars:
-  database_name: "{{ env_var('TARGET_SNOWFLAKE_DATABASE')}}"
-  schema_name: "{{ env_var('TARGET_SNOWFLAKE_SCHEMA')}}"
-
+  
 seeds:
   uh_ifr:
     +schema: seed_data
