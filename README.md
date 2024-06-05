@@ -53,7 +53,8 @@ TARGET_SNOWFLAKE_WAREHOUSE=<warehouse>
 TARGET_SNOWFLAKE_ROLE=<role>
 ```
 
-6. Run make command: 
+6. Run Streamlit App
 ```sh
-make
+streamlit run app.py
 ```
+Click on "Export Snowflake CSV Data"
