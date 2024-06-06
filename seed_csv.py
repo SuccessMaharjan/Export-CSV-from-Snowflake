@@ -9,6 +9,7 @@ load_dotenv()
 dbt_seeds_folder = os.getenv('DBT_SEEDS_FOLDER')
 csv_files_directory = os.getenv('CSV_FILES_DIRECTORY')
 
+
 # List all CSV files in the directory
 csv_files = [f for f in os.listdir(csv_files_directory) if f.endswith('.csv')]
 

@@ -16,16 +16,13 @@ else
     ACTIVATE_CMD := .
 endif
 
-all: venv install create_env_file requirements mkdir_extract_csv extract_csv load_profiles seed_csv dbt_seed
+all: venv install requirements mkdir_extract_csv extract_csv load_profiles seed_csv dbt_seed
 
 venv:
 	$(PYTHON_ENV) -m venv $(VENV)
 
 install:
 	$(ACTIVATE_CMD) $(VENV_ACTIVATE)
-
-create_env_file:
-	touch .env
 
 requirements:
 	pip3 install -r requirements.txt
@@ -41,8 +38,8 @@ extract_csv:
 	python3 export.py
 
 ## This command is required if .env is not working on MAC.
-##export_cmd:
-##	export $(grep -v '^#' .env | xargs)
+export_cmd:
+	export $(grep -v '^#' .env | xargs)
 
 load_profiles:
 	cd loadcsv && python3 load_profiles_yml.py
