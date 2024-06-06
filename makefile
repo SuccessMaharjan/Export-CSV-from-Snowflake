@@ -16,13 +16,16 @@ else
     ACTIVATE_CMD := .
 endif
 
-all: venv install requirements mkdir_extract_csv extract_csv load_profiles seed_csv dbt_seed
+all: venv install create_env_file requirements mkdir_extract_csv extract_csv load_profiles seed_csv dbt_seed
 
 venv:
 	$(PYTHON_ENV) -m venv $(VENV)
 
 install:
 	$(ACTIVATE_CMD) $(VENV_ACTIVATE)
+
+create_env_file:
+	touch .env
 
 requirements:
 	pip3 install -r requirements.txt
