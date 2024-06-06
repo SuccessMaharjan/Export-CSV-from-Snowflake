@@ -51,6 +51,9 @@ TARGET_SNOWFLAKE_PASSWORD=<password>
 TARGET_SNOWFLAKE_ACCOUNT=<account-name>
 TARGET_SNOWFLAKE_WAREHOUSE=<warehouse>
 TARGET_SNOWFLAKE_ROLE=<role>
+
+TARGET_SNOWFLAKE_DATABASE=<db-name-for-target-tables>
+TARGET_SNOWFLAKE_SCHEMA=<schema-name-for-target-tables>
 ```
 
 6. Run Streamlit App
