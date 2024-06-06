@@ -38,8 +38,8 @@ extract_csv:
 	python3 export.py
 
 ## This command is required if .env is not working on MAC.
-export_cmd:
-	export $(grep -v '^#' .env | xargs)
+##export_cmd:
+##	export $(grep -v '^#' .env | xargs)
 
 load_profiles:
 	cd loadcsv && python3 load_profiles_yml.py
