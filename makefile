@@ -42,10 +42,10 @@ export_cmd:
 	export $(grep -v '^#' .env | xargs)
 
 load_profiles:
-	cd loadcsv && python3 load_profiles_yml.py
+	cd orchestrate && loadcsv && python3 load_profiles_yml.py
 
 seed_csv:
 	python3 seed_csv.py
 
 dbt_seed:
-	cd loadcsv && dbt seed
+	cd orchestrate && cd loadcsv && dbt seed
